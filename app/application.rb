@@ -21,4 +21,5 @@ class CookieJar < Sinatra::Base
     resp.finish
   end
 end
+
       
