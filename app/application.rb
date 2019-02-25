@@ -10,4 +10,13 @@ class CookieJar < Sinatra::Base
       object = req.path.split("/jar/").last
       if retreave = @@jar.find {|c| c.name==object}
         resp.write retreave.price
+      else
+        resp.status 404
+        "Page not found"
+      end
+    else 
+      resp.status 202
+      "Object not found"
+    end
+  end
       
