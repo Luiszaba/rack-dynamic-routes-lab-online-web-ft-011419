@@ -5,11 +5,8 @@ class Application
       Item.new("Figs",3.42),
       Item.new("Pears",0.99)
       ]
-      
       resp = Rack::Response.new
       req = Rack::Request.new(env)
-
-
       if req.path.match(/items/)
         object =req.path.split("/items/").last
       if  z = @@items.detect { |i|i.name == object}
