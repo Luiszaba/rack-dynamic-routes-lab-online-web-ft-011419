@@ -1,6 +1,6 @@
 class CookieJar < Sinatra::Base
   
-  @@jar = [()]
+  @@jar = [Cookie.new]
   
   def call(env)
     resp = Rack::Response.new
