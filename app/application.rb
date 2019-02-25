@@ -11,7 +11,7 @@ class Application
     req =  Rack::Response.new(env)
     
     if req.path.match(/items/)
-      object = req.path.split("/items/").last
+      dynamic = req.path.split("/items/").last
       if retreave = @@item.detect {|c| c.name==object}
         resp.write "#{c.price}"
       else
