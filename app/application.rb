@@ -9,7 +9,7 @@ class Application
     if req.path.match(/items/)
       object = req.path.split("/items/").last
       if retreave = @@item.detect {|c| c.name==object}
-        resp.write 
+        resp.write "#{c.price}"
       else
         resp.status = 400
         resp.write "Item not found"
