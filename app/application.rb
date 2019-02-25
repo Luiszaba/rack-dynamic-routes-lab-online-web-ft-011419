@@ -1,6 +1,6 @@
 class CookieJar < Sinatra::Base
   
-  @@jar = [Cookie.new("Chocolate Chip"), Cookie.new("Almond", Cookie.new(Macadamea Nut)]
+  @@jar = [Cookie.new("Chocolate Chip", 1.99), Cookie.new("Almond",2.99), Cookie.new("Macadamea Nut", 3.99)]
   
   def call(env)
     resp = Rack::Response.new
