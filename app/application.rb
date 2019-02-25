@@ -13,7 +13,7 @@ class Application
       if req.path.match(/items/)
         object =req.path.split("/items/").last
       if  s = @@items.detect { |i|i.name == object}
-        resp.write "You requested the #{s.price}"
+        resp.write "#{s.price}"
       else
       resp.status = 400
       resp.write "Item not found"
