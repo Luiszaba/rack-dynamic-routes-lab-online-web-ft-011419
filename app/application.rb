@@ -1,9 +1,8 @@
 class Application
   
   @@items = [
-  Item.new("Chocolate Chip", 1.99), 
-  Item.new("Almond",2.99), 
-  Item.new("Macadamea Nut", 3.99)
+ Item.new("Figs",3.42),
+ Item.new("Pears",0.99)
             ]
   
   def call(env)
