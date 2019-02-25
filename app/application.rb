@@ -13,7 +13,7 @@ class Application
     if req.path.match(/items/)
       dynamic = req.path.split("/items/").last
       if i = @@items.detect {|c| c.name==object}
-        resp.write "#{c.price}"
+        resp.write "#{i.price}"
       else
         resp.status = 400
         resp.write "Item not found"
