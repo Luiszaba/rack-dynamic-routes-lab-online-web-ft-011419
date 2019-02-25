@@ -8,5 +8,5 @@ class CookieJar < Sinatra::Base
     
     if req.path.match(/jar/)
       object = req.path.split("/jar/").last
-      if object.find 
+      if object = @@jar.find {|c| c. 
       
