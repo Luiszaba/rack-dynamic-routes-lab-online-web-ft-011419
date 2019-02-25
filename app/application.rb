@@ -5,4 +5,4 @@ class CookieJar < Sinatra::Base
     req =  Rack::Response.new(env)
     
     if req.path.match(/jar/)
-      object = req.path.split(", ")
+      object = req.path.split("/jar/")
