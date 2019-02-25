@@ -1,4 +1,4 @@
-class CookieJar < Sinatra::Base
+class Application
   
   @@item = [Item.new("Chocolate Chip", 1.99), Item.new("Almond",2.99), Item.new("Macadamea Nut", 3.99)]
   
