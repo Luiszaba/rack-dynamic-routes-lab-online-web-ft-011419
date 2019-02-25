@@ -1,5 +1,7 @@
 require_relative './application'
 
+@@jar = []
+
 class Item
   attr_accessor :name, :price
 
