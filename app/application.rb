@@ -1,6 +1,6 @@
 class CookieJar < Sinatra::Base
   
-  @@jar = [Cookie.new("Chocolate Chip", 1.99), Cookie.new("Almond",2.99), Cookie.new("Macadamea Nut", 3.99)]
+  @@item = [Item.new("Chocolate Chip", 1.99), Item.new("Almond",2.99), Item.new("Macadamea Nut", 3.99)]
   
   def call(env)
     resp = Rack::Response.new
@@ -8,7 +8,7 @@ class CookieJar < Sinatra::Base
     
     if req.path.match(/jar/)
       object = req.path.split("/jar/").last
-      if retreave = @@jar.find {|c| c.name==object}
+      if retreave = @@item.find {|c| c.name==object}
         resp.write retreave.price
       else
         resp.status = 400
