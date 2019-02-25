@@ -11,11 +11,11 @@ class CookieJar < Sinatra::Base
       if retreave = @@jar.find {|c| c.name==object}
         resp.write retreave.price
       else
-        resp.status 404
+        resp.status = 400
         "Page not found"
       end
     else 
-      resp.status 202
+      resp.status = 404
       "Object not found"
     end
   end
