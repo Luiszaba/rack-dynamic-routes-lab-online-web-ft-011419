@@ -8,6 +8,6 @@ class CookieJar < Sinatra::Base
     
     if req.path.match(/jar/)
       object = req.path.split("/jar/").last
-      if object = @@jar.find {|c| c.name==object}
-        resp.write.c.price
+      if retreave = @@jar.find {|c| c.name==object}
+        resp.write.retreave.price
       
