@@ -1,7 +1,7 @@
 class Application
   def call(env)
     
-    @@items =[
+    @@items = [
       Item.new("Figs",3.42),
       Item.new("Pears",0.99)
       ]
@@ -11,8 +11,8 @@ class Application
 
 
       if req.path.match(/items/)
-        dynamic =req.path.split("/items/").last
-      if  s=@@items.detect { |i|i.name == dynamic}
+        object =req.path.split("/items/").last
+      if  s=@@items.detect { |i|i.name == object}
         resp.write "You requested the #{s.price}"
       else
       resp.status = 400
