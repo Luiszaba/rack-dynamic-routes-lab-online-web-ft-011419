@@ -12,8 +12,8 @@ class Application
 
       if req.path.match(/items/)
         object =req.path.split("/items/").last
-      if  s = @@items.detect { |i|i.name == object}
-        resp.write "#{s.price}"
+      if  z = @@items.detect { |i|i.name == object}
+        resp.write "#{z.price}"
       else
       resp.status = 400
       resp.write "Item not found"
