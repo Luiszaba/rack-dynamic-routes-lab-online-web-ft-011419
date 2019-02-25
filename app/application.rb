@@ -12,11 +12,11 @@ class Application
         resp.write retreave.price
       else
         resp.status = 400
-        resp.write "Page not found"
+        resp.write "Item not found"
       end
     else 
       resp.status = 404
-      resp.write "Object not found"
+      resp.write "Item not here"
     end
     resp.finish
   end
