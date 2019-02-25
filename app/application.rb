@@ -6,8 +6,8 @@ class Application
     resp = Rack::Response.new
     req =  Rack::Response.new(env)
     
-    if req.path.match(/jar/)
-      object = req.path.split("/jar/").last
+    if req.path.match(/item/)
+      object = req.path.split("/item/").last
       if retreave = @@item.find {|c| c.name==object}
         resp.write retreave.price
       else
