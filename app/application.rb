@@ -18,5 +18,7 @@ class CookieJar < Sinatra::Base
       resp.status = 404
       resp.write "Object not found"
     end
+    resp.finish
   end
+end
       
