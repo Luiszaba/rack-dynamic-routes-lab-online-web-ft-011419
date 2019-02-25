@@ -1,4 +1,5 @@
 class CookieJar < Sinatra::Base
   
   def call(env)
-    req.response::
+    resp Rack::Response.new
+    rep Rack::Response.new(env)
